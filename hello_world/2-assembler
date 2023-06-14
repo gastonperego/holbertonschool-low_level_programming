@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c -S $CFILE > $CFILE
+gcc -c $CFILE > $CFILE | tr .o .s
