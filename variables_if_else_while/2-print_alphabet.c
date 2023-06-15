@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	printf("abcdefghijklmnopqrstuvwxyz");
+	putchar("abcdefghijklmnopqrstuvwxyz\n");
 	return (0);
 }
