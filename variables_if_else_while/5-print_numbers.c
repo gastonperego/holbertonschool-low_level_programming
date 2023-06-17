@@ -10,7 +10,7 @@ int main(void)
 
 	for (a = 0; a < 10; a++)
 	{
-		printf("%d\n,a");
+		printf("%d\t,a");
 	}
 	return (0);
 }
