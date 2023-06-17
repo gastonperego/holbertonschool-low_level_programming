@@ -7,5 +7,19 @@
 
 int main(void)
 {
-	char
+	char a = 'a';
+	char z = 'z';
+	char A = 'A';
+	char Z = 'Z';
 
+	for (; a <= z; a++)
+	{
+		putchar(a);
+	}
+	for (; A <= Z; A++)
+	{
+		putchar(A);
+	}
+	putchar('\n');
+	return (0);
+}
