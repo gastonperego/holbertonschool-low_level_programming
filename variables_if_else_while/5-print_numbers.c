@@ -6,11 +6,6 @@
  */
 int main(void)
 {
-	int a;
-
-	for (a = 0; a < 10; a++)
-	{
-		printf("a\n");
-	}
+	printf("0123456789\n");
 	return (0);
 }
