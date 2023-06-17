@@ -4,7 +4,7 @@
  *
  * Return: always zero
  */
-int main(void);
+int main(void)
 {
 	char z = z;
 
