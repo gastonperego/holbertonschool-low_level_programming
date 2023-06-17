@@ -7,7 +7,7 @@
 int main(void)
 {
 	int a = '0';
-	int z = '10';
+	int z = 10;
 
 	for (; a < z; a++)
 	{
