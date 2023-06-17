@@ -8,9 +8,10 @@ int main(void)
 {
 	short a = 48;
 
-	for (; a < 57;)
+	for (; a < 58;)
 	{
 		putchar(a++);
 	}
+	putchar('\n');
 	return (0);
 }
