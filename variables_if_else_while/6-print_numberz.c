@@ -8,9 +8,9 @@ int main(void)
 {
 	short a = '0';
 
-	for (; a < 10; a++)
+	for (; a < 10;)
 	{
-		putchar(a);
+		putchar(a++);
 	}
 	return (0);
 }
