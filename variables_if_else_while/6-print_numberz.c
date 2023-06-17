@@ -1,0 +1,16 @@
+#include <stdio.h>
+/**
+ * main- Print single digits from 0 to 9
+ *
+ * Return: 0
+ */
+int main(void)
+{
+	int a = '0';
+
+	for (; a < 10; a++)
+	{
+		putchar(a);
+	}
+	return (0);
+}
