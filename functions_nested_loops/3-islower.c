@@ -8,7 +8,7 @@
  */
 int _islower(int c)
 {
-	int a;
+	char a;
 
 	if (c >= 97 && c <= 122)
 	{
@@ -17,6 +17,5 @@ int _islower(int c)
 	{
 		a = "48";
 	}
-	_putchar('\n');
 	return (a);
 }
