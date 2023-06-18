@@ -9,9 +9,12 @@ int main(void)
 	char a = 'a';
 	char z = 'z';
 
-	for (; a <= z;)
+	for (; a <= z; a++)
 	{
-		putchar(a++);
+		if (a != 'q' && a!= 'e')
+		{
+			putchar(a);
+		}
 	}
 	putchar('\n');
 	return (0);
