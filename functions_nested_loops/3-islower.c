@@ -8,14 +8,11 @@
  */
 int _islower(int c)
 {
-	char a;
-
 	if (c >= 97 && c <= 122)
 	{
-		a = "49";
+		return (1);
 	} else
 	{
-		a = "48";
+		return (0);
 	}
-	return (a);
 }
