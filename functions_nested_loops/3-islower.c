@@ -8,14 +8,14 @@
  */
 int _islower(int c)
 {
-	char a;
+	int a;
 
 	if (c >= 97 && c <= 122)
 	{
-		a = "49"
+		a = "49";
 	} else
 	{
-		a = "48"
+		a = "48";
 	}
 	_putchar('\n');
 	return (a);
