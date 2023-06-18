@@ -8,11 +8,14 @@ void print_alphabet_x10(void)
 {
 	char a = 'a';
 
-	if (a <= 'z')
+	for (a <= 'z')
 	{
-		a++;
-	} else
-	{
-		a = 'a';
-	}
+		_putchar(a);
+		if (a < 'z')
+		{
+			a++;
+		} else
+		{
+			a = 'a';
+		}
 }
