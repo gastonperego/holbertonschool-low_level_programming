@@ -4,11 +4,13 @@
  *
  *  Return: 0
  */
-int main(void)
+void main(void)
 {
-	char c[26] = "abcdefghijklmnopqrstuvwxyz";
+	char a = 'a';
 
-	_putchar(c);
+	for (; a <= 'z'; a++)
+	{
+	_putchar(a);
+	}
 	_putchar('\n');
-	return (0);
 }
