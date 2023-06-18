@@ -7,8 +7,9 @@
 void print_alphabet_x10(void)
 {
 	char a = 'a';
+	char A = '0';
 
-	for (;a <= 'z';)
+	for (; A <= 57;)
 	{
 		_putchar(a);
 		if (a < 'z')
@@ -17,6 +18,7 @@ void print_alphabet_x10(void)
 		} else
 		{
 			a = 'a';
+			A++;
 		}
 	}
 }
