@@ -4,7 +4,7 @@ OBJ = $(wildcard *.o)
 NAME := school
 
 
-all: school
+all: $(NAME)
 
 
 school: $(OBJ)
