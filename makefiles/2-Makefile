@@ -8,7 +8,7 @@ all: $(NAME)
 
 
 school: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o school
 
 $(OBJ):
 	$(CC) $(SRC)
