@@ -13,7 +13,9 @@ int print_last_digit(int c)
 
 	if (a >= 0)
 	{
+		_putchar(a);
 		return (a);
 	}
+	_putchar(b);
 	return (b);
 }
