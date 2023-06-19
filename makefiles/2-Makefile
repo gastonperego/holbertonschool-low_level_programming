@@ -3,10 +3,10 @@ SRC = main.c school.c
 OBJ = $(wildcard *.o)
 NAME = school
 
-all: $(NAME)
+all: school
 
 
-$(NAME): $(OBJ)
+school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 $(OBJ):
