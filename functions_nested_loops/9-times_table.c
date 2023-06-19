@@ -15,7 +15,7 @@ void times_table(void)
 			int pd = (a * b) / 10;
 			int ud = (a * b) % 10;
 
-			if (pd != 48)
+			if (pd != 0)
 			{
 			_putchar('0' + pd);
 			}
