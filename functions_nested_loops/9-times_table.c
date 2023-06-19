@@ -18,14 +18,14 @@ void times_table(void)
 			if (pd != 48)
 			{
 			_putchar('0' + pd);
-			} else 
+			}
+			else
 			{
 				_putchar(' ');
 			}
 			_putchar('0' + ud);
 			_putchar(',');
 			_putchar(' ');
-			}
 		}
 		_putchar('\n');
 	}
