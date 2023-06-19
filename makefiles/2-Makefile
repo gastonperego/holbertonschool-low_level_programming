@@ -9,9 +9,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-main.o: 
-	gcc main.c
-
-school.o: 
-	gcc school.c
+$(OBJ):
+	$(CC) $(SRC)
 	
