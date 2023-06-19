@@ -19,7 +19,7 @@ void times_table(void)
 			{
 			_putchar('0' + pd);
 			}
-			else
+			else if (b != 0)
 			{
 				_putchar(' ');
 			}
