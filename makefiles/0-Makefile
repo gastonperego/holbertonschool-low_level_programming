@@ -1,2 +1,4 @@
 all: school
-cat school.c > echo
+
+school: 
+	gcc main.c school.c -o school 
