@@ -16,7 +16,7 @@ int print_sign(int n)
 		_putchar(43);
 	} else if (n > '0')
 	{
-		a = '-1';
+		a = -1;
 		_putchar('-');
 	} else if (n == '0')
 	{
