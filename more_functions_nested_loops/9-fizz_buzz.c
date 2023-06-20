@@ -21,8 +21,11 @@ int main(void)
 		{
 			printf("%d", n);
 		}
-	putchar(' ');
+	if (n != 100)
+	{
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
+	}
 }
