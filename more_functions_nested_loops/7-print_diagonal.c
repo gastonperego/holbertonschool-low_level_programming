@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- *  print_line- print a line
+ *  print_diagonal- print a line
  *
  *  @n: the large of the line
  *
  *  Return:0
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 	int m = 0;
 
