@@ -7,17 +7,18 @@
 void more_numbers(void)
 {
 	int a = 0;
+	int b = 0;
 
 	for (; a <= 9; a++)
 	{
-		for (; a < 15; a++)
+		for (; b < 15; a++)
 		{
-			if (a > 9)
+			if (b > 9)
 			{
-				_putchar('0' + (a / 10));
+				_putchar('0' + (b / 10));
 			}
-			_putchar('0' + (a % 10));
-			if (a == 14)
+			_putchar('0' + (b % 10));
+			if (b == 14)
 			{
 				_putchar('\n');
 			}
