@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * fizzbuzz- f
  *
@@ -12,21 +13,22 @@ void fizzbuzz(void)
 	{
 		if (n % 3 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
+			putchar('F');
+			putchar('i');
+			putchar('z');
+			putchar('z');
 		}
-		else if (n % 5 == 0)
+		if (n % 5 == 0)
 		{
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
+			putchar('B');
+			putchar('u');
+			putchar('z');
+			putchar('z');
 		} else
 		{
-			_putchar(n);
+			putchar(n);
 		}
 	}
+	putchar('\n');
 }
 
