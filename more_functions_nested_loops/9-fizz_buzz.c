@@ -17,15 +17,16 @@ int main(void)
 		if (n % 5 == 0)
 		{
 			printf("Buzz");
-		} if (n % 3 != 0 && n % 5 != 0)
+		}
+	       	if (n % 3 != 0 && n % 5 != 0)
 		{
 			printf("%d", n);
 		}
-	if (n != 100)
-	{
-		putchar(' ');
+		if (n != 100)
+		{
+			putchar(' ');
+		}
 	}
 	putchar('\n');
-	}
 	return (0);
 }
