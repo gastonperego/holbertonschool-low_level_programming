@@ -4,7 +4,7 @@
  *
  * Return: 0
  */
-void main(void)
+int main(void)
 {
 	int n;
 
@@ -29,5 +29,5 @@ void main(void)
 		}
 	}
 	putchar('\n');
+	return (0);
 }
-
