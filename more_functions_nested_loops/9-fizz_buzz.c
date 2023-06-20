@@ -4,7 +4,7 @@
  *
  * Return: 0
  */
-void fizzbuzz(void)
+int main(void)
 {
 	int n;
 
@@ -28,5 +28,6 @@ void fizzbuzz(void)
 			_putchar(n);
 		}
 	}
+return (0);
 }
 
