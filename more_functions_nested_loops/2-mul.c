@@ -2,7 +2,7 @@
 /**
  *  mul-Multiplies two integers
  *
- *  @a; int 1
+ *  @a: int 1
  *  @b: int 2
  *
  *  Return: 0
