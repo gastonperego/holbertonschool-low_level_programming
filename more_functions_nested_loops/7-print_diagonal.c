@@ -1,11 +1,22 @@
 #include "main.h"
 /**
- * print_diagonal- prints a diagonal
+ *  print_line- print a line
  *
- * @n: large of the diagonal
+ *  @n: the large of the line
  *
- * Return: 0
+ *  Return:0
  */
-void print_diagonal(int n)
+void print_line(int n)
 {
+	int m = 0;
 
+	if (n > 0)
+	{
+		_putchar('\');
+	for (;m < n; m++)
+	{
+		_putchar(' '):
+	}
+	_putchar('\');
+	_putchar('\n');
+}
