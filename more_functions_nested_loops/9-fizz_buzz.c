@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * fizzbuzz- f
+ * main- f
  *
  * Return: 0
  */
-void fizzbuzz(void)
+void main(void)
 {
 	int n;
 
