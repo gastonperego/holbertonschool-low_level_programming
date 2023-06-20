@@ -18,10 +18,7 @@ void more_numbers(void)
 				_putchar('0' + (b / 10));
 			}
 			_putchar('0' + (b % 10));
-			if (b == 14)
-			{
-				_putchar('\n');
-			}
 		}
+		_putchar('\n');
 	}
 }
