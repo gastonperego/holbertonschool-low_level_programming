@@ -8,24 +8,18 @@ int main(void)
 {
 	int n;
 
-	for (n = 0; n <= 100; n++)
+	for (n = 1; n <= 100; n++)
 	{
 		if (n % 3 == 0)
 		{
-			putchar('F');
-			putchar('i');
-			putchar('z');
-			putchar('z');
+			printf("Fizz");
 		}
 		if (n % 5 == 0)
 		{
-			putchar('B');
-			putchar('u');
-			putchar('z');
-			putchar('z');
+			printf("Buzz");
 		} else
 		{
-			putchar(n);
+			printf("%d", n);
 		}
 	putchar(' ');
 	}
