@@ -26,7 +26,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		while (( fijo - 1) < length)
+		while ((fijo - 2) < length)
 		{
 			_putchar(str[fijo]);
 			fijo++;
