@@ -9,27 +9,27 @@
 void puts_half(char *str)
 {
 	int length;
+	int fijo;
 
 	for (length = 0; str[length] != '\0';)
 	{
 		length++;
 	}
-	int par = (length / 2);
-
+	fijo = length / 2;
 	if ((length % 2) == 0)
 	{
-		while (par < length)
+		while (fijo < length)
 		{
-			_putchar(str[par]);
-			par++;
+			_putchar(str[fijo]);
+			fijo++;
 		}
 	}
 	else
 	{
-		while ((par - 1) < length)
+		while (( fijo - 1) < length)
 		{
-			_putchar(str[par]);
-			par++;
+			_putchar(str[fijo]);
+			fijo++;
 		}
 	}
 	_putchar('\n');
