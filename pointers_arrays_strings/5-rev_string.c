@@ -9,14 +9,19 @@
 void rev_string(char *s)
 {
 	int c = 0;
-	char h[10]; 
+	char inicio = 0;
+	char almacen;	
 
 	for (; s[c] != '\0';)
 	{
 		c++;
 	}
-	for (; c > 0; c--)
+	while (inicio < c)
 	{
-		h = _putchar(s[c]);
+		almacen = s[inicio];
+		s[inicio] = s[c];
+		s[c] = almacen;
+		c--;
+		inicio ++;
 	}
 }
