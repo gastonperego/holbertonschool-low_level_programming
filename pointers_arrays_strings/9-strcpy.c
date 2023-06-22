@@ -18,5 +18,6 @@ char *_strcpy(char *dest, char *src)
 		inter = src[count];
 		count++;
 	}
-	_putchar(inter);
+	dest = inter;
+	return (0);
 }
