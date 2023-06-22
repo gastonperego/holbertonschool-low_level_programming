@@ -14,7 +14,7 @@ void puts_half(char *str)
 	{
 		length++;
 	}
-	_putchar(length);
+	_putchar(('0' + length));
 	/*if ((length % 2) == 0)
 	{
 		for (; (length / 2) < length; length++)
