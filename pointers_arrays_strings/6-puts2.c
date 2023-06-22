@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * puts2- print the pair "lockers" of a string
  *
@@ -6,7 +6,7 @@ nclude "main.h"
  *
  * Return: 0
  */
-void puts2(char *str);
+void puts2(char *str)
 {
 	int c;
 	int i = 0;
