@@ -9,7 +9,7 @@
 void rev_string(char *s)
 {
 	int c = 0;
-	char inicio = 0;
+	int inicio = 0;
 	char almacen;	
 
 	for (; s[c] != '\0';)
@@ -18,9 +18,9 @@ void rev_string(char *s)
 	}
 	while (inicio < c)
 	{
-		almacen = *s[inicio];
-		*s[inicio] = *s[c];
-		*s[c] = almacen;
+		almacen = s[inicio];
+		s[inicio] = s[c];
+		s[c] = almacen;
 		c--;
 		inicio ++;
 	}
