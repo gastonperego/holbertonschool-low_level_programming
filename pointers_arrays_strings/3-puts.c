@@ -12,6 +12,6 @@ void _puts(char *str)
 
 	for (; str[c] != '\0'; c++)
 	{
-		_putchar(str)
+		_putchar(str[c]);
 	}
 }
