@@ -20,7 +20,7 @@ void print_array(int *a, int n)
 		} 
 		else if (loop == n - 1)
 		{
-			printf("%d");
+			printf("%d", a[loop]);
 		}
 	}
 	printf("\n");
