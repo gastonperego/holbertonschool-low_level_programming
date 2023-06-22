@@ -9,6 +9,7 @@
 void rev_string(char *s)
 {
 	int c = 0;
+	char h[10]; 
 
 	for (; s[c] != '\0';)
 	{
@@ -16,6 +17,6 @@ void rev_string(char *s)
 	}
 	for (; c > 0; c--)
 	{
-		_putchar(s[c]);
+		h = putchar(s[c];
 	}
 }
