@@ -15,12 +15,11 @@ void puts_half(char *str)
 	{
 		length++;
 	}
-	printf("%d",length);
 	if ((length % 2) == 0)
 	{
 		while (par < length)
 		{
-			_putcahr(str[par]);
+			_putchar(str[par]);
 			par++;
 		}
 	}
@@ -28,7 +27,7 @@ void puts_half(char *str)
 	{
 		while ((par - 1) < length)
 		{
-			_putchar(str[par];
+			_putchar(str[par]);
 			par++;
 		}
 	}
