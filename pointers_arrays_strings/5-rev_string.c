@@ -18,9 +18,9 @@ void rev_string(char *s)
 	}
 	while (inicio < c)
 	{
-		almacen = s[inicio];
-		s[inicio] = s[c];
-		s[c] = almacen;
+		almacen = *s[inicio];
+		*s[inicio] = *s[c];
+		*s[c] = almacen;
 		c--;
 		inicio ++;
 	}
