@@ -10,12 +10,14 @@ void puts_half(char *str)
 {
 	int length;
 	int fijo;
+	int fijo2;
 
 	for (length = 0; str[length] != '\0';)
 	{
 		length++;
 	}
 	fijo = length / 2;
+	fijo2 = length - 1;
 	if ((length % 2) == 0)
 	{
 		while (fijo < length)
@@ -26,7 +28,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		while ((fijo + 1) < length)
+		while ((fijo / 2) < length)
 		{
 			_putchar(str[fijo]);
 			fijo++;
