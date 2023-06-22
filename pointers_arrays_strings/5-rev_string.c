@@ -16,7 +16,8 @@ void rev_string(char *s)
 	{
 		c++;
 	}
-	while (inicio < (c - 1))
+	c = c - 1;
+	while (inicio < c)
 	{
 		almacen = s[inicio];
 		s[inicio] = s[c];
