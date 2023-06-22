@@ -30,8 +30,8 @@ void puts_half(char *str)
 	{
 		while ((fijo2 / 2) < length)
 		{
-			_putchar(str[fijo]);
-			fijo++;
+			_putchar(str[fijo2]);
+			fijo2++;
 		}
 	}
 	_putchar('\n');
