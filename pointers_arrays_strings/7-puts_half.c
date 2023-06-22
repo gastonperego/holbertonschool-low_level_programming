@@ -20,7 +20,7 @@ void puts_half(char *str)
 	{
 		while ((largo / 2) < length)
 		{
-			_putchar(str[largo]);
+			_putchar("str[largo]");
 			largo++;
 		}
 	}
@@ -28,7 +28,7 @@ void puts_half(char *str)
 	{
 		while (((largo - 1) / 2) < length)
 		{
-			_putchar(str[largo]);
+			_putchar("str[largo]");
 			largo++;
 		}
 	}
