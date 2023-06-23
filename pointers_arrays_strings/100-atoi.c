@@ -24,7 +24,7 @@ int _atoi(char *s)
 			{
 				num = (num - (s[c] - 48));
 			}
-			else 
+			else
 			{
 			num = num + (s[c] - 48);
 			}
