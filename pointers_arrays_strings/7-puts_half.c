@@ -15,22 +15,9 @@ void puts_half(char *str)
 	{
 		length++;
 	}
-	largo = length;
-	if ((largo % 2) == 0)
+	largo = length + 1;
+	for (; largo / 2 < length; largo++)
 	{
-		while ((largo / 2) < length)
-		{
-			_putchar(str[largo]);
-			largo++;
-		}
+		_putchar(str[largo]);
 	}
-	else
-	{
-		while (((largo - 1) / 2) < length)
-		{
-			_putchar(str[largo]);
-			largo++;
-		}
-	}
-	_putchar('\n');
 }
