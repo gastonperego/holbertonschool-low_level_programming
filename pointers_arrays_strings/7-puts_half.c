@@ -17,7 +17,7 @@ void puts_half(char *str)
 	}
 	largo = length + 1;
 	_putchar(str[length]);
-	_putchar(str[largo]);
+	_putchar(str[largo / 2]);
 	/*while ((largo / 2) < length)
 	{
 		_putchar(str[largo]);
