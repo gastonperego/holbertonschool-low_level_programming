@@ -16,10 +16,12 @@ void puts_half(char *str)
 		length++;
 	}
 	largo = length + 1;
-	while ((largo / 2) < length)
+	_putchar(str[length]);
+	_putchar(str[largo]);
+	/*while ((largo / 2) < length)
 	{
 		_putchar(str[largo]);
 		largo++;
-	}
+	}*/
 	_putchar('\n');
 }
