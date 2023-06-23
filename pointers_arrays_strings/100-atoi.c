@@ -32,5 +32,5 @@ int _atoi(char *s)
 		}
 		c++;
 	}
-	return (0)
+	return (0);
 }
