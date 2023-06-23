@@ -26,7 +26,8 @@ int _atoi(char *s)
 				num = (num * 10) + s[c + 1];
 			}
 		}
-		else if ((s[c] >= 48 && s[c] <= 57) && (s[c + 1] < 48 && s[c + 1] > 57))
+		else if (((s[c] >= 48 && s[c] <= 57) && (s[c + 1] < 48 && s[c + 1] > 57))
+			|| s[c + 1] == '\0')
 		{
 			return (num * a);
 		}
