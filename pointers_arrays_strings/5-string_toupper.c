@@ -4,7 +4,7 @@
  *
  * @s: string
  *
- * Retrun: char
+ * Return: char
  */
 char *string_toupper(char *s)
 {
