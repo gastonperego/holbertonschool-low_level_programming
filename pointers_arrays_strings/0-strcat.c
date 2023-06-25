@@ -27,5 +27,5 @@ char *_strcat(char *dest, char *src)
 		_putchar(dest[srccount]);
 	}
 	_putchar('\n');
-	return (dest);
+	return (0);
 }
