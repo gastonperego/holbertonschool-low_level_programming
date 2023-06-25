@@ -9,8 +9,8 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int descount = '0';
-	int srccount = '0';
+	int descount = 0;
+	int srccount = 0;
 
 	while (dest[descount] != '\0')
 	{
