@@ -13,11 +13,12 @@ void reverse_array(int *a, int n)
 	int final = 0;
 	int z;
 
-	while (final < n)
+	while (a[final] != '\0')
 	{
 		final++;
 	}
-	for (; inicio < final;)
+	final--
+	for (; inicio < n;)
 	{
 		z = a[inicio];
 		a[inicio] = a[final];
