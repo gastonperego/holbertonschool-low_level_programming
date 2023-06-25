@@ -11,6 +11,7 @@ char *_strcat(char *dest, char *src)
 {
 	int descount = '0';
 	int srccount = '0';
+	int finalcount = '0';
 
 	while (dest[descount] != '\0')
 	{
@@ -22,9 +23,9 @@ char *_strcat(char *dest, char *src)
 		dest[descount] = src[srccount];
 		descount++;
 	}
-	for (srccount = '0'; srccount < descount; srccount++)
+	for (; finalcount < descount; finalcount++)
 	{
-		_putchar(dest[srccount]);
+		_putchar(dest[finalcount]);
 	}
 	_putchar('\n');
 	return (0);
