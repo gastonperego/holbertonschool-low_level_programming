@@ -17,7 +17,7 @@ char *cap_string(char *s)
 			if (s[count - 1] == ' ' || s[count - 1] == '.' || s[count - 1] == ';' ||
 			s[count - 1] == ',' || s[count - 1] == '!' || s[count - 1] == '"' ||
 			s[count - 1] == '?' || s[count - 1] == '(' || s[count - 1] == ')' ||
-			s[count - 1] == '{' || s[count - 1] == '}')
+			s[count - 1] == '{' || s[count - 1] == '}' || count == 0)
 			{
 				s[count] = s[count] - 32;
 			}
