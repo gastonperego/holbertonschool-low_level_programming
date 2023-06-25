@@ -22,5 +22,10 @@ char *_strcat(char *dest, char *src)
 		dest[descount] = src[srccount];
 		descount++;
 	}
-	return(dest);
+	for (srccount = '0'; srccount < descount; srccount++)
+	{
+		_putchar(dest[srccount]);
+	}
+	_putchar('\n');
+	return (dest);
 }
