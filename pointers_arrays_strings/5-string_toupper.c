@@ -1,4 +1,4 @@
-#include "main,h"
+#include "main.h"
 /**
  * string_toupper- change all lowercase to upper
  *
@@ -14,7 +14,7 @@ char *string_toupper(char *s)
 	{
 		if (s[count] <= 122 && a[count] >= 97)
 		{
-			s[count] = s[count] -32;
+			s[count] = s[count] - 32;
 		}
 	}
 	return (s);
