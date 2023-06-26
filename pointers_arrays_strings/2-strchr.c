@@ -11,6 +11,8 @@
 char *_strchr(char *s, char c)
 {
 	int count = 0;
+	char m;
+	int count2 = 0;
 
 	while (s[count] != c)
 	{
@@ -18,7 +20,12 @@ char *_strchr(char *s, char c)
 	}
 	if (s[count] == c)
 	{
-		return (*s[count]);
+		while (s[count] != '\0')
+		{
+		m[count2] = s[count];
+		count2++;
+		}
+		return (s);
 	}
 	return ('\0');
 }
