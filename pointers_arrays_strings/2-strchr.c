@@ -3,7 +3,7 @@
  * _strchr- Returns a pointer to the first occurrence of the character c in
  * the string s, or NULL if the character is not found
  *
- * @s: string where thw program will look for the character c
+ * @s: string where the programm will look for the character c
  * @c: character to look for
  *
  * Return: char
@@ -11,7 +11,7 @@
 char *_strchr(char *s, char c)
 {
 	int count = 0;
-	char m;
+	char m[count2];
 	int count2 = 0;
 
 	while (s[count] != c)
