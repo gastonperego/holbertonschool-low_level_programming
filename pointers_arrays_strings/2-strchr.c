@@ -11,8 +11,8 @@
 char *_strchr(char *s, char c)
 {
 	int count = 0;
-	char m[count2];
 	int count2 = 0;
+	char m[count2];
 
 	while (s[count] != c)
 	{
