@@ -26,5 +26,5 @@ void print_diagsums(int *a, int size)
 		diagonal2 += a[c * size + (size - 1 - c)];
 		c++;
 	}
-	printf("%d, %d", diagonal1, diagonal2);
+	printf("%d, %d\n", diagonal1, diagonal2);
 }
