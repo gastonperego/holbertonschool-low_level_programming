@@ -21,9 +21,9 @@ void print_diagsums(int *a, int size)
 		c++;
 	}
 	c = 0;
-	for (; c < 0;)
+	for (; c < size;)
 	{
-		diagonal2 += a[c * size + (size -1 -c)];
+		diagonal2 += a[c * size + (size - 1 - c)];
 		c++;
 	}
 	printf("%d, %d", diagonal1, diagonal2);
