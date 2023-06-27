@@ -20,7 +20,8 @@ void print_diagsums(int *a, int size)
 		diagonal1 += a[c * size + c];
 		c++;
 	}
-	for (c = 0; c < 0;)
+	c = 0;
+	for (; c < 0;)
 	{
 		diagonal2 += a[c * size - c];
 		c++;
