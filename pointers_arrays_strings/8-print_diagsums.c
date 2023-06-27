@@ -12,21 +12,17 @@
 void print_diagsums(int *a, int size)
 {
 	int c = 0;
-	int c2 = 0;
-	int c3 = 0;
 	int diagonal1 = 0;
 	int diagonal2 = 0;
 
 	for (; c < size;)
 	{
-		diagonal1 = a[c][c2] + a[c + 1][c2 + 1] - a[c][c2];
+		diagonal1 += a[c * size + c];
 		c++;
-		c2++;
 	}
-	for (; c3 < c;)
+	for (; 0 < c;)
 	{
-		diagonal2 = a[c3][c] + a[c3 + 1][c - 1] - a[c3][c];
-		c3++;
+		diagonal2 += a[c * size + (size - (c + 1))];
 		c--;
 	}
 	printf("%d, %d", diagonal1, diagonal2);
