@@ -12,7 +12,8 @@ void _puts_recursion(char *s)
 
 	if (s[count != '0'])
 	{
-		_putchar(s[count];
-		_putchar(s[count + 1]);
+		_putchar(s[count]);
+		count++;
+		_puts_recursion(s);
 	}
 }
