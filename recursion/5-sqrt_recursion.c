@@ -6,7 +6,7 @@
  *
  * Return: int
  */
-int aux (int n, int m)
+int aux(int n, int m)
 {
 	if (m * m == n)
 	{
