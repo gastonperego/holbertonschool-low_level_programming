@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _sqrt_recursion- returns natural square root of a number
+ * aux- calculate the square root
  *
  * @n: numbero ro calculate the square root of
  *
@@ -21,6 +22,5 @@ int aux(int n, int m)
 
 int _sqrt_recursion(int n)
 {
-	aux(n, 1);
-	return (aux);
+	return (aux(n, 1));
 }
