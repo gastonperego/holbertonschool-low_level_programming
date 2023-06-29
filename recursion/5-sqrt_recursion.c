@@ -15,7 +15,7 @@ int aux(int n, int m)
 	}
 	else
 	{
-		return(aux(n, m + 1));
+		return (aux(n, m + 1));
 	}
 }
 /**
