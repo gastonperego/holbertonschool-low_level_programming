@@ -15,9 +15,8 @@ int aux(int n, int m)
 	}
 	else if (m <= n)
 	{
-		aux(n, m + 1);
+		return(aux(n, m + 1));
 	}
-	return (-1);
 }
 /**
  * _sqrt_recursion- print
