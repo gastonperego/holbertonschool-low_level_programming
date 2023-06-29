@@ -13,7 +13,7 @@ int aux(int n, int m)
 	{
 		return (m);
 	}
-	else if (m <= n)
+	else
 	{
 		return(aux(n, m + 1));
 	}
