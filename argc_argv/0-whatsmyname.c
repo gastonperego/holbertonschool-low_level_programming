@@ -1,4 +1,4 @@
-#include <stidio.h>
+#include <stdio.h>
 /**
  * main- prints the name of the function
  *
