@@ -9,6 +9,6 @@
  */
 int whats_my_name(int argc, char *argv)
 {
-	putchar("argv[argc]");
+	putchar(argv[argc]);
 	return (0);
 }
