@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stidio.h>
 /**
  * main- prints the name of the function
