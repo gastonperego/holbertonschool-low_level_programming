@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * whats_my_name- prints the name of the function
  *
