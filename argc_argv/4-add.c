@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	for (count = 1; count < argc; count++)
 	{
 		aux = argv[count];
-		for (count2 = 0; aux[count2] != '\0', count2++)
+		for (count2 = 0; aux[count2] != '\0'; count2++)
 		{
 			if (aux[count] < 48 || aux[count] > 57)
 			{
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				sum += argv[count];
+				sum += atoi(argv[count]);
 			}
 		}
 	}
