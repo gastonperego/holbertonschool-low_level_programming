@@ -8,13 +8,13 @@
  *
  * Return: int
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	argc = 0;
+	count = 0;
 
-	for (; *argv[argc] != '\0'; argc++)
+	for (; count <= argc; count++)
 	{
-		printf("%s\n", *argv[argc]);
-		return (0);
+		printf("%s\n", argv[count]);
 	}
+	return (0);
 }
