@@ -10,9 +10,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int count = 0;
+	int count;
 
-	for (; count <= argc; count++)
+	for (count = 0; count < argc; count++)
 	{
 		printf("%s\n", argv[count]);
 	}
