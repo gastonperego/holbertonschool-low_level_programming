@@ -10,9 +10,11 @@
  */
 int main(int argc, char *argv[])
 {
-	while (*argv[argc] != '\0')
+	int count = 0;
+	
+	while (*argv[count] != '\0')
 	{
-		argc++;
+		count++;
 	}
 	printf("%d\n", argc);
 	return (0);
