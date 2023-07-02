@@ -1,4 +1,4 @@
-#include "mian.h"
+#include "main.h"
 #include <stdio.h>
 /**
  * main- print then umber of arguments given
@@ -11,5 +11,5 @@
 int main(int argc, char *argv)
 {
 	printf("%d", argc);
-	Return (0);
+	return (0);
 }
