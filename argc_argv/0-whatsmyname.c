@@ -3,6 +3,7 @@
  * whats_my_name- prints the name of the function
  *
  * @argv: string
+ * @argc: number of elements of the string
  *
  * Return: 0
  */
