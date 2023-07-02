@@ -6,8 +6,8 @@
  *
  * Return: 0
  */
-int whats_my_name(char *argv[])
+int whats_my_name(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", argv[argc - argc]);
 	return (0);
 }
