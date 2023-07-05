@@ -16,11 +16,11 @@ char *str_concat(char *s1, char *s2)
 	int count2 = 0;
 	int count3 = 0;
 
-	while (*s1)
+	for (; s1[count] != '\0')
 	{
 		count++;
 	}
-	while (*s2)
+	for (; s2[count2] != '\0')
 	{
 		count2++;
 	}
