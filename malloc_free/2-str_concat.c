@@ -24,6 +24,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		count2++;
 	}
+	if (s1 == NULL)
+	{
+		count = 0;
+	}
+	if (s2 == NULL)
+	{
+		count2 = 0;
+	}
 	s = malloc((sizeof(char) * count) + (sizeof(char) * (count2 + 1)));
 	if (s == NULL)
 	{
