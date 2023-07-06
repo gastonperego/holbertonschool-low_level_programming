@@ -16,13 +16,19 @@ char *str_concat(char *s1, char *s2)
 	int count2 = 0;
 	int count3 = 0;
 
-	for (; s1[count] != '\0';)
+	if (s1)
 	{
-		count++;
+		for (; s1[count] != '\0';)
+		{
+			count++;
+		}
 	}
-	for (; s2[count2] != '\0';)
+	if (s2)
 	{
-		count2++;
+		for (; s2[count2] != '\0';)
+		{
+			count2++;
+		}
 	}
 	s = malloc((sizeof(char) * count) + (sizeof(char) * (count2 + 1)));
 	if (s == NULL)
