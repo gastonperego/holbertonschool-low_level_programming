@@ -26,13 +26,13 @@ int **alloc_grid(int width, int heigth)
 	for (c = 0; c < heigth; c++)
 	{
 		s[c] = malloc(sizeof(int) * width);
-		if (s[c] == '\0')
+		if (s[c] == NULL)
 		{
 			for (; c > 0; c--)
-			{					
+			{
 				free(s[c]);
 			}
-			free(s);i
+			free(s);
 			return ('\0');
 		}
 	}
