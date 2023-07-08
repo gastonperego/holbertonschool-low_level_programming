@@ -19,12 +19,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (*s1)
 	{
-		for (; s1[c] != '\0';)
+		for (; *s1 + c != '\0';)
 			c++;
 	}
 	if (*s2)
 	{
-		for (; s2[c2] != '\0';)
+		for (; *s2 + c2 != '\0';)
 			c2++;
 	}
 	if (n < c2)
