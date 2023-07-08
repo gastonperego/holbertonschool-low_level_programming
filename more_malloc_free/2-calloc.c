@@ -25,7 +25,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	for (; c <= a; c++)
 	{
-		((char *)s)[c] = '0';
+		((char *)s)[c] = '\0';
 	}
 	return (s);
 }
