@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 #include <stdlib.h>
 /**
  * string_nconcat- concatenates a number of characters of 2 strings and returns
