@@ -17,7 +17,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *s;
 
 	if (s1)
-		for (; s[c] != '\0';)
+		for (; s1[c] != '\0';)
 			c++;
 	if (s2)
 		for (; s2[c2] != '\0';)
