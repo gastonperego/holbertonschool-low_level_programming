@@ -34,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 && n < c2)
 		for (c2 = 0; c2 < n; c2++, c++)
 			s[c] = s2[c2];
-	if (s2 && n >= c2)
+	else if (s2 != NULL && n >= c2)
 		for (c2 = 0; s2[c2] != '\0'; c2++, c++)
 			s[c] = s2[c2];
 	return (s);
