@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (*s1)
 	{
-		for (c = 0; s1[c] != '\0'; c++)
+		for (c = 0; *s1 + c != '\0'; c++)
 			s[c] = s1[c];
 	}
 	if (*s2)
