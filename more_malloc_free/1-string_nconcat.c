@@ -1,50 +1,67 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * string_nconcat- concatenates a number of characters of 2 strings and returns
- * a pointer
+ * _strlen- return the length of a string
  *
- * @s1: string to add characters
- * @s2: string from where the character will be added
- * @n: number of characters to be added
+ * @st: string
  *
- * Return: pointer to the concatenated string
+ * Return: int
+ */
+int _strlen(char *st)
+{
+	int c;
+
+	if (!st)
+	{
+		return (0);
+	}
+	else
+	{
+		for (c = 0; st[c] != '\0';)
+		{
+			c++
+		}
+	}
+	return (c);
+}
+/**
+ * string_nconcat- concatenates the first string to n characters of the second
+ *
+ * @s1: string 1
+ * @s2: string 2
+ * @n: number of characters of the string 2 to be copied
+ *
+ * Return: pointer to the allocated memory
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int lens1 = _strlen(s1);
+	unsigned int lens2 = _strlen(s2);
+	unsigned int len, c, c2;
 	char *s;
-	unsigned int c = 0;
-	unsigned int c2 = 0;
-	unsigned int len;
 
+	if (n < lens2)
+		len = lens1 + n;
+	else
+		len = lens1 + lens2;
+	s = malloc(sizeof(char) * len + 1);
+	c = 0;
+	c2 = 0;
 	if (s1)
 	{
-		while (s1[c] != '\0')
+		while (s[c] != '\0')
+		{
+			s[c] = s1[c];
 			c++;
+		}
 	}
 	if (s2)
 	{
-		while (s2[c2] != '\0')
-			c2++;
-	}
-	if (n < c2)
-		len = n;
-	else
-		len = c2;
-	s = malloc(sizeof(char) * (c + len + 1));
-	if (s == NULL)
-		return ('\0');
-	if (s1)
-	{
-		for (c = 0; s1[c] != '\0'; c++)
-			s[c] = s1[c];
-	}
-	c2 = 0;
-	if (s2[c2] != '\0')
-	{
-		for (; c < (len + c); c2++, c++)
+		while (c < len)
+		{
 			s[c] = s2[c2];
+			c++, c2++;
+		}
 	}
 	return (s);
-
 }
