@@ -19,19 +19,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1)
 	{
-		for (; s1[c] != '\0';)
+		while (s1[c] != '\0')
 			c++;
 	}
 	if (s2)
 	{
-		for (; s2[c2] != '\0';)
+		while (s2[c2] != '\0')
 			c2++;
 	}
 	if (n < c2)
 		len = n;
 	else
 		len = c2;
-	s = malloc(sizeof(char) * (len + 1));
+	s = malloc(sizeof(char) * (c + len + 1));
 	if (s == NULL)
 		return ('\0');
 	if (s1)
