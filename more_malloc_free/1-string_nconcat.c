@@ -9,7 +9,7 @@
  */
 int _strlen(char *st)
 {
-	int c;
+	int c = 0;
 
 	if (!st)
 	{
@@ -17,7 +17,7 @@ int _strlen(char *st)
 	}
 	else
 	{
-		for (c = 0; st[c] != '\0';)
+		while (st[c] != '\0')
 		{
 			c++;
 		}
