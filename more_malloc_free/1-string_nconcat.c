@@ -49,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return ('\0');
 	c = 0;
 	c2 = 0;
-	if (lengs1 != '\0')
+	if (lens1 != '\0')
 	{
 		while (c < lens1)
 		{
