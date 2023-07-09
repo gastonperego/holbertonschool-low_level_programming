@@ -13,7 +13,7 @@ int _strlen(char *st)
 
 	if (!st)
 	{
-		return (0);
+		return ('\0');
 	}
 	else
 	{
@@ -49,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return ('\0');
 	c = 0;
 	c2 = 0;
-	if (s1)
+	if (lengs1 != '\0')
 	{
 		while (c < lens1)
 		{
@@ -57,7 +57,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			c++;
 		}
 	}
-	if (s2)
+	if (len != '\0')
 	{
 		while (c < len)
 		{
