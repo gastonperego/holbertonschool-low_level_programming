@@ -66,11 +66,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (len != '\0')
 	{
-		while (c < len)
+		for (; c2 < len; c2++, c++)
 		{
 			s[c] = s2[c2];
-			c++, c2++;
 		}
 	}
+	s[c] = '\0';
 	return (s);
 }
