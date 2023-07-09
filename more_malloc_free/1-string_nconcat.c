@@ -19,7 +19,7 @@ int _strlen(char *st)
 	{
 		for (c = 0; st[c] != '\0';)
 		{
-			c++
+			c++;
 		}
 	}
 	return (c);
