@@ -40,11 +40,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len, c, c2;
 	char *s;
 
-	if (n < lens2)
-		len = lens1 + n;
+	if (lens2 < n)
+	{
+		len = lens2;
+	}
 	else
-		len = lens1 + lens2;
-	s = malloc(sizeof(char) * len + 1);
+	{
+		len = n;
+	}
+	s = malloc(sizeof(char) * (lens1 + len + 1));
 	if (s == NULL)
 		return ('\0');
 	c = 0;
