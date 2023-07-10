@@ -1,11 +1,12 @@
+#ifndef HEADERFILE
+#define HEADERFILE
 /**
- * struct dog- struct dog
+ * struct dog- ...
  *
  * @name: name of the dog
- * @age: age of the dog
+ * @age: age of he dog
  * @owner: owner of the dog
  */
-#ifndef struct
 struct dog
 {
 	char *name;
