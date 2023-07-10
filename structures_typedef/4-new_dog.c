@@ -43,7 +43,7 @@ char *_strdup(char *str)
  *
  * Return: pointer to dog_t
  */
-dog_t *new_dog(char *name, float *age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *a;
 
