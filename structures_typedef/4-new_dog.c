@@ -23,11 +23,6 @@ char *_strdup(char *str)
 	{
 		count++;
 	}
-	s = malloc(sizeof(char) * (count + 1));
-	if (s == NULL || s == 0)
-	{
-		return ('\0');
-	}
 	for (; count2 <= count; count2++)
 	{
 		s[count2] = str[count2];
