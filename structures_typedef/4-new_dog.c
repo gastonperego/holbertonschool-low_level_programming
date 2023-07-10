@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _strdup- return a pointer to a copy of a string
@@ -52,6 +53,5 @@ dog_t *new_dog(char *name, float *age, char *owner)
 	a->name = _strdup(name);
 	a->age = *age;
 	a->owner = _strdup(owner);
-	return(a);
-
+	return (a);
 }
