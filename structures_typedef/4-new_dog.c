@@ -29,7 +29,7 @@ char *_strcpy(char *dest, char *src)
  *
  * Return: int
  */
-int _strlen(*char b)
+int _strlen(char *b)
 {
 	int count = 0;
 
@@ -76,7 +76,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	if (owner)
 	{
-		ownercp = malloc(strlen(owner));
+		ownercp = malloc(_strlen(owner));
 	}
 	if (ownercp == NULL)
 	{
