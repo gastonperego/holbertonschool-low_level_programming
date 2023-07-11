@@ -65,20 +65,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(a);
 		return ('\0');
 	}
-	if (name)
+	if (name != NULL)
 	{
 		namecp = malloc(_strlen(name));
-		if (namecp == NULL)
+		if (!namecp)
 		{
 			free(a);
 			return (NULL);
 		}
 		_strcpy(namecp, name);
 	}
-	if (owner)
+	if (owner != NULL)
 	{
 		ownercp = malloc(_strlen(owner));
-		if (ownercp == NULL)
+		if (!ownercp)
 		{
 			free(a);
 			return ('\0');
