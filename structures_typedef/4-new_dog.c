@@ -1,34 +1,28 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * _strdup- return a pointer to a copy of a string
+ * _strcpy-Write a function that copies the string pointed to by src,
+ *  including the terminating null byte (\0), to the buffer pointed to by dest.
  *
- * @str: string to copy
+ *  @dest: idk
+ *  @src: idk either
  *
- * Return: puntero
+ *  Return: char
  */
-char *_strdup(char *str)
+char *_strcpy(char *dest, char *src)
 {
-	char *s;
-	int count = 0;
-	int count2 = 0;
+	int count;
 
-	if (str == NULL)
+	for (count = 0; src[count] != '\0'; count++)
 	{
-		return ('\0');
+		dest[count] = src[count];
+
 	}
-	for (; str[count] != '\0';)
-	{
-		count++;
-	}
-	for (; count2 <= count; count2++)
-	{
-		s[count2] = str[count2];
-	}
-	return (s);
+	dest[count] = '\0';
+	return (dest);
 }
+
 /**
  * new_dog - new dog
  *
@@ -42,11 +36,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *a;
 
+
 	a = malloc(sizeof(dog_t));
 	if (a == NULL)
 		return (NULL);
-	a->name = _strdup(name);
+	a->name = name;
 	a->age = age;
-	a->owner = _strdup(owner);
+	a->owner = owner;
 	return (a);
 }
