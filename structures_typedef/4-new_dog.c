@@ -33,14 +33,14 @@ int _strlen(char *b)
 {
 	int count = 0;
 
-	if (b)
+	if (!b)
 	{
-		while (b[count] != '\0')
-		{
-			count++;
-		}
+		return ('\0');
 	}
-	return (count);
+
+	while (b[count] != '\0')
+		count++;
+	return (count + 1);
 }
 
 /**
