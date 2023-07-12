@@ -4,9 +4,6 @@
 /**
  * main- makes mathematical operations
  *
- * @a: int 1
- * @b: int 2
- * @o: operator
  * @argc: counter of arguments
  * @argv: vector of arguments
  *
@@ -27,6 +24,6 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	o = argv[2];
 
-	res = *(get_op_func(o))(a, b);
+	res = (*get_op_func(o))(a, b);
 	return (res);
 }
