@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main- makes mathematical operations
  *
@@ -24,6 +25,6 @@ int main(int argc, char *argv[], int a, int b, char *o)
 	b = atoi(argv[3]);
 	o = argv[2];
 
-	res = *get_op_fuc(o)(a, b);
+	res = *get_op_func(o)(a, b);
 	return (res);
 }
