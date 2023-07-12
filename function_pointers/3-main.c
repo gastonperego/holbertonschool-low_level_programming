@@ -12,9 +12,11 @@
  *
  * Return: int
  */
-int main(int argc, char *argv[], int a, int b, char *o)
+int main(int argc, char *argv[])
 {
 	int res;
+	int a, b;
+	char *o;
 
 	if (argc > 3)
 	{
@@ -25,6 +27,6 @@ int main(int argc, char *argv[], int a, int b, char *o)
 	b = atoi(argv[3]);
 	o = argv[2];
 
-	res = *get_op_func(o)(a, b);
+	res = *(get_op_func(o))(a, b);
 	return (res);
 }
