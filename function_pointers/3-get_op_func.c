@@ -25,8 +25,6 @@ int (*get_op_func(char *s))(int, int)
 		i++;
 	}
 	if (i > 4)
-	{
-		exit(99);
-	}
+		return ('\0');
 	return (ops[i].f);
 }
