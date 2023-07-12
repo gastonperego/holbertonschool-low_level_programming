@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	o = argv[2];
 
-	if (get_op_func == '\0' || argv[2] == '\0')
+	if (get_op_func(o) == '\0' || *argv[2] == '\0')
 	{
 		printf("Error\n");
 		return (99);
 	}
-	if ((argv[2] == '/' || argv[2] == '%') && argv[3] == 0)
+	if ((*o == '/' || *o == '%') && *argv[3] == 0)
 	{
 		printf("Error\n");
 		return (100);
