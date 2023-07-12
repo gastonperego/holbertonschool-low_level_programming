@@ -30,7 +30,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		for (count = 0; count < n; count++)
 		{
 			a = va_arg(args, int);
-			printf("%d%s", a, separator);
+			if (count == n - 1)
+			printf("%d", a);
+			else
+			{
+				printf("%d%s", a, separator);
+			}
 		}
 	}
 	printf("\n");
