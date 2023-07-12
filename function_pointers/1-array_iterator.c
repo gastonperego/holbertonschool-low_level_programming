@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stddef.h>
 /**
  * array_iterator- gives easch element of an array to a pointer to a funcion
  *
