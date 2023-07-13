@@ -8,7 +8,7 @@
  *
  * Return: pointer to the function that corresponds to the operation needed
  */
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -26,5 +26,5 @@ int (*get_op_func(char *s))(int, int)
 	}
 	if (i > 4)
 		return (NULL);
-	return (ops[i].f);
+	return (ops[i].f(a, b));
 }
