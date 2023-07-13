@@ -27,15 +27,15 @@ int main(int argc, char *argv[])
 	if (get_op_func(o) == NULL || *argv[2] == '\0')
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 	if ((*o == '/' || *o == '%') && *argv[3] == 0)
 	{
 		printf("Error\n");
-		return (100);
+		exit(100);
 	}
 
-	res = (*get_op_func(o))(a, b);
+	res = get_op_func(o)(a, b);
 	printf("%d\n", res);
-	return (res);
+	return (0);
 }
