@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
 /**
  * print_char- prints a char
  *
@@ -65,7 +64,6 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int c = 0;
 	int c2;
-	int len = strlen(format);
 	char *s = "";
 	print print[] = {
 		{'c', print_char},
@@ -83,7 +81,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[c] == print[c2].a)
 			{
-				printf("%s", s)
+				printf("%s", s);
 				print[c2].f(args);
 				s = " ,";
 			}
