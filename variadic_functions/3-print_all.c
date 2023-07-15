@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int c = 0;
-	int c2 = 0;
+	int c2;
 	print print[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -71,8 +71,9 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(args, format);
-	while (format[c] != '\0' && format != NULL)
+	while (format[c] != '\0' && format)
 	{
+		c2 = 0;
 		while (print[c2].a != '\0')
 		{
 			if (format[c] == print[c2].a)
@@ -84,5 +85,6 @@ void print_all(const char * const format, ...)
 		}
 		c++;
 	}
+	va_end(args);
 	printf("\n");
 }
