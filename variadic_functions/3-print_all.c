@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (c < 4 && format[c] != '\0')
 	{
-		if (format[c] == print[c].a)
+		if (*(format[c]) == *(print[c].a))
 		{
 			print[c].f(args);
 			printf(", ");
