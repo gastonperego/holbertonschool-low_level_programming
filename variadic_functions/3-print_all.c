@@ -66,6 +66,7 @@ void print_all(const char * const format, ...)
 	int c = 0;
 	int c2;
 	int len = strlen(format);
+	char *s = "";
 	print print[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -82,9 +83,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[c] == print[c2].a)
 			{
+				printf("%s", s)
 				print[c2].f(args);
-				if (c < len - 1)
-					printf(", ");
+				s = " ,";
 			}
 			c2++;
 		}
