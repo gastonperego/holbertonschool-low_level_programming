@@ -41,7 +41,7 @@ void print_float(va_list l)
  *
  * Return: always 0
  */
-int print_string(va_list l)
+void print_string(va_list l)
 {
 	char *s = va_arg(l, char *)
 
@@ -79,4 +79,3 @@ void print_all(const char * const format, ...)
 		c++;
 	}
 }
-
