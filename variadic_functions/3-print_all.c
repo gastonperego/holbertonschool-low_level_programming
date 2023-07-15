@@ -10,7 +10,7 @@
  */
 void print_char(va_list l)
 {
-	printf("%c", vs_arg(l, int));
+	printf("%c", va_arg(l, int));
 }
 /**
  * print_int- prints an integer
@@ -32,7 +32,7 @@ void print_int(va_list l)
  */
 void print_float(va_list l)
 {
-	printf("%f", va_arg(l, float));
+	printf("%f", va_arg(l, double));
 }
 /**
  * print_string- prints a string
@@ -43,7 +43,7 @@ void print_float(va_list l)
  */
 void print_string(va_list l)
 {
-	char *s = va_arg(l, char *)
+	char *s = va_arg(l, char *);
 
 	if (s == NULL)
 		printf("(nil)");
