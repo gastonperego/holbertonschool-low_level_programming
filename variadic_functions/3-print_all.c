@@ -74,7 +74,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(args, format);
-	while (format[c] != '\0' && format)
+	while (format[c] != '\0' && format != NULL)
 	{
 		c2 = 0;
 		while (print[c2].a != '\0')
@@ -83,7 +83,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", s);
 				print[c2].f(args);
-				s = " ,";
+				s = ", ";
 			}
 			c2++;
 		}
