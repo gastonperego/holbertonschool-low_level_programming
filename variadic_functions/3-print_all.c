@@ -61,20 +61,26 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int c = 0;
+	int c2 = 0;
 	print print[] = {
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
 		{'s', print_string},
+		{'\0', NULL},
 	};
 
 	va_start(args, format);
-	while (c < 4 && format[c] != '\0')
+	while (format[c] != '\0')
 	{
-		if (*(format[c]) == *(print[c].a))
+		while (c2 < 4 && print[c].a != '\0')
 		{
-			print[c].f(args);
-			printf(", ");
+			if (format[c] == print[c].a)
+			{
+				print[c].f(args);
+				printf(", ");
+			}
+		c2++;
 		}
 		c++;
 	}
