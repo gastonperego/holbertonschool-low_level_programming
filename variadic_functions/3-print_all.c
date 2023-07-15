@@ -65,6 +65,7 @@ void print_all(const char * const format, ...)
 	int c = 0;
 	int c2;
 	char *s = "";
+	
 	print print[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -74,7 +75,8 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(args, format);
-	while (format[c] != '\0' && format != NULL)
+	
+	while (format != NULL && format[c] != '\0')
 	{
 		c2 = 0;
 		while (print[c2].a != '\0')
