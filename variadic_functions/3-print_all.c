@@ -77,7 +77,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[c] == print[c].a)
 			{
-				*(print[c].f)(args);
+				print[c].f(args);
 				printf(", ");
 			}
 			c2++;
