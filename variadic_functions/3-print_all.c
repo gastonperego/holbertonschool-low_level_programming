@@ -47,8 +47,8 @@ void print_string(va_list l)
 
 	if (s == NULL)
 		printf("(nil)");
-
-	printf("%s", s);
+	if (s != NULL)
+		printf("%s", s);
 }
 /**
  * print_all-  print wathever it's given to it
@@ -62,6 +62,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int c = 0;
 	int c2;
+	int len = strlen(format);
 	print print[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -79,7 +80,8 @@ void print_all(const char * const format, ...)
 			if (format[c] == print[c2].a)
 			{
 				print[c2].f(args);
-				printf(", ");
+				if (c < len - 1)
+					printf(", ");
 			}
 			c2++;
 		}
