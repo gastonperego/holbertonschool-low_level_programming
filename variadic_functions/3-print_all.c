@@ -62,10 +62,10 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int c = 0;
 	print print[] = {
-		{'c', print_char};
-		{'i', print_int};
-		{'f', print_float};
-		{'s', print_string};
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_string},
 	};
 
 	va_start(args, format);

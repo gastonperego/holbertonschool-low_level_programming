@@ -10,6 +10,7 @@ typedef struct a
 	void (*f)(va_list l);
 } print;
 
+void print_all(const char * const format, ...);
 void print_char(va_list l);
 void print_int(va_list l);
 void print_float(va_list l);
