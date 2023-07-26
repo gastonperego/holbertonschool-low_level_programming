@@ -23,5 +23,5 @@ int sum_dlistint(dlistint_t *head)
 		return (res);
 	}
 	else
-		return (NULL);
+		return ('\0');
 }
