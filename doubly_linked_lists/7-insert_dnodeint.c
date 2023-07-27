@@ -39,8 +39,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 		if (tmp->next == NULL)
 		{
-			free(new);
-			new = add_dnode_end(*h);
+			new->next = NULL;
+			new->prev = tmp;
+			tmp->next = new;
 		}
 		else
 		{
