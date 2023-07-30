@@ -11,6 +11,16 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int a = 1;
 	int res = 0;
+	int len = 0;
+	unsigned long int copy = n;
+
+	while (ocpy != 0)
+	{
+		copy = copy >> 1;
+		len++;
+	}
+	if (index > len)
+		return (-1);
 
 	if (index > 0)
 		a = a << index;
