@@ -11,7 +11,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int a = 1;
 	int bit = 0;
-	int max = sizeof(unsigned long int * 8);
+	unsigned int max = (sizeof(unsigned long int) * 8);
 
 	if (index < max)
 		a = a << index;
