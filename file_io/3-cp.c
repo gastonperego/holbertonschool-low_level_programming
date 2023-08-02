@@ -25,13 +25,12 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fd = open(argv[1], O_RDONLY);
-	readed = read(fd, buf, 100000);
 
-	if (fd < 0 || readed == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+	if (fd < 0)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
+	readed = read(fd, buf, 100000);
+	if (readed < 0)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 
 	fd1 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	wrote = write(fd1, buf, readed);
