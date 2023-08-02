@@ -33,11 +33,11 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fd1 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+	fd1 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	wrote = write(fd1, buf, readed);
 	if (fd1 < 0 || wrote < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
