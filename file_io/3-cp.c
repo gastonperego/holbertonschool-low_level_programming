@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * cp- copies the content of a file to another
+ * main- copies the content of a file to another
  *
  * @argc: count of arguments
  * @argv: content of the arguments
@@ -15,37 +15,36 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd, fd1;
+	int fd, fd1, close1, close2;
 	char buf[100000];
 	ssize_t readed;
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(SRDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fd = open(argv[1], O_RDONLY);
+	readed = read(fd, buf, 1024);
 
-	if (fd < 0)
+	if (fd < 0 || readed < 0)
 	{
-		dprintf(2, "Error: Cant't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Cant't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
-	readed = read(fd, buf, 1024);
-
 	fd1 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-
+	write(fd1, buf, readed);
 	if (fd1 < 0)
 	{
-		dprintf(2, "Error: Cant't write to %s", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Cant't write to %s", argv[2]);
 		exit(99);
 	}
 
-	write(fd1, buf, readed);
-
-	close(fd);
-	close(fd1);
+	close1 = close(fd);
+	close2 = close(fd1);
+	if (close1 < 0 || close2 < 0)
+		return (-1);
 
 	return (0);
 }
