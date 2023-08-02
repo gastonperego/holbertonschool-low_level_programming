@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	}
 
 	fd1 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-	wrote write(fd1, buf, readed);
+	wrote = write(fd1, buf, readed);
 	if (fd1 < 0 || wrote < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 	close2 = close(fd1);
 	if (close1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d". fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
 	if (close2 < 0)
