@@ -9,13 +9,13 @@
  * main- copies the content of a file to another
  *
  * @argc: count of arguments
- * @argv: content of the arguments
+ * @av: content of the arguments
  *
  * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char *av[])
 {
-	int fd, fd1, close1, close2;
+	int f, fd1, close1, close2;
 	char buf[100000];
 	ssize_t readed, wrote;
 
@@ -24,34 +24,32 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd = open(argv[1], O_RDONLY);
+	f = open(av[1], O_RDONLY);
 
-	if (fd < 0)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	readed = read(fd, buf, 100000);
+	if (f < 0)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+	readed = read(f, buf, 100000);
 	if (readed < 0)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), close(f);
+		exit(98);
+	}
 
-	fd1 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd1 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	wrote = write(fd1, buf, readed);
 	if (fd1 < 0 || wrote < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
-
-	close1 = close(fd);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99); }
+	close1 = close(f);
 	close2 = close(fd1);
 	if (close1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", f);
+		exit(100); }
 	if (close2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd1);
 		exit(100);
 	}
-
-	return (0);
-}
+	return (0); }
