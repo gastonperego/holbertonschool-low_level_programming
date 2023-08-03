@@ -15,7 +15,7 @@
  */
 int main(int argc, char *av[])
 {
-	int f, fd1, close1, close2;
+	int fd, fd1, close1, close2;
 	char buf[1024];
 	ssize_t readed, wrote;
 
@@ -31,7 +31,7 @@ int main(int argc, char *av[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 	if (fd1 < 0)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	while (read(f, buf, 1024) > 0)
+	while (read(fd, buf, 1024) > 0)
 	{
 		readed = read(fd, buf, 1024);
 		if (readed < 0)
