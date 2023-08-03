@@ -25,13 +25,16 @@ int main(int argc, char *av[])
 		exit(97);
 	}
 	f = open(av[1], O_RDONLY);
-	fd1 = open(av[2], O_WRONLY | o_CREATE | O_TRUNC, 0644)
+	fd1 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 
 	if (f < 0)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	if (f1 < 0)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	while (readed != 0)
+	if (fd1 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
+	}
+	while ((readed = read(f, buf, 1024)) > 0)
 	{
 		readed = read(f, buf, 1024);
 		if (readed < 0)
@@ -43,7 +46,7 @@ int main(int argc, char *av[])
 		wrote = write(fd1, buf, 1024);
 		if (wrote < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Cant't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Cant't write to %s\n", av[2]);
 			exit(99);
 		}
 	}
