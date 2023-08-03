@@ -16,7 +16,7 @@
 int main(int argc, char *av[])
 {
 	int f, fd1, close1, close2;
-	char buf[100000];
+	char buf[1024];
 	ssize_t readed, wrote;
 
 	if (argc != 3)
@@ -25,22 +25,29 @@ int main(int argc, char *av[])
 		exit(97);
 	}
 	f = open(av[1], O_RDONLY);
+	fd1 = open(av[2], O_WRONLY | o_CREATE | O_TRUNC, 0644)
 
 	if (f < 0)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	readed = read(f, buf, 100000);
-	if (readed < 0)
+	if (f1 < 0)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	while (readed != 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), close(f);
-		exit(98);
+		readed = read(f, buf, 1024);
+		if (readed < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			close(f);
+			exit(98);
+		}
+		wrote = write(fd1, buf, 1024);
+		if (wrote < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Cant't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 
-	fd1 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	wrote = write(fd1, buf, readed);
-	if (fd1 < 0 || wrote < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99); }
 	close1 = close(f);
 	close2 = close(fd1);
 	if (close1 < 0)
