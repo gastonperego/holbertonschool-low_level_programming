@@ -1,22 +1,19 @@
 #include "search_algos.h"
 /**
+* binary_search-searchs an integer in an array of integers using binary search
 *
+* @array: pointer to the first element of the array
+* @size: size of the array
+* @value: value to look for in the array
+*
+* Return: index where the value was found
 */
 int binary_search(int *array, size_t size, int value)
 {
-	int low = 0, high = size - 1, ret;
+	int low = 0, high = size - 1, mid;
 
 	if (!array)
 		return (-1);
-
-	ret = recursive_binary(array, high, low, value);
-
-	return (ret);
-}
-
-int recursive_binary(int *array, int high, int low, int value)
-{
-	int mid;
 
 	while (low < high)
 	{
@@ -24,7 +21,7 @@ int recursive_binary(int *array, int high, int low, int value)
 		mid = (low + high) / 2;
 
 		if (array[mid] == value)
-			return(mid);
+			return (mid);
 		if (array[mid] < value)
 		{
 			low = mid + 1;
@@ -38,13 +35,23 @@ int recursive_binary(int *array, int high, int low, int value)
 	return (-1);
 }
 
+
+/**
+* print_array - prints the array between 2 indexes
+*
+* @array: pointer to the first element of the array
+* @high: highest index of the array to print 
+* @low: lowest index of the array to print
+*
+* Return: void
+*/
 void print_array(int *array, int high, int low)
 {
 	printf("Searching in the array: ");
-	while (low < high)
+	while (low <= high)
 	{
 		printf("%d", array[low]);
-		if (low != high - 1)
+		if (low != high)
 			printf(", ");
 		low++;
 	}
