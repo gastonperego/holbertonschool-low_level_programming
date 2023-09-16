@@ -15,7 +15,7 @@ int binary_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	while (low < high)
+	while (low <= high)
 	{
 		print_array(array, high, low);
 		mid = (low + high) / 2;
@@ -40,14 +40,14 @@ int binary_search(int *array, size_t size, int value)
 * print_array - prints the array between 2 indexes
 *
 * @array: pointer to the first element of the array
-* @high: highest index of the array to print 
+* @high: highest index of the array to print
 * @low: lowest index of the array to print
 *
 * Return: void
 */
 void print_array(int *array, int high, int low)
 {
-	printf("Searching in the array: ");
+	printf("Searching in array: ");
 	while (low <= high)
 	{
 		printf("%d", array[low]);
